@@ -16,7 +16,7 @@ Route::get('blog', function () {
     return view('blog',['isi' => 'My blog']);
     
 });
-Route::get('social', function () {
+Route::get('contact', function () {
     return view('social_media',['contact' => 'My contact']);
     
 });
