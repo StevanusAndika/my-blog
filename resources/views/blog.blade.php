@@ -12,10 +12,15 @@
 <a href="/">blog</a>
 <a href="/blog">contact</a>
 <h1>{{ $isi }}</h3>
-<h2>blog 1 </h1>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium commodi amet eaque recusandae placeat, consequuntur omnis? Quasi error ullam id accusamus cupiditate molestiae aliquid, soluta, eligendi mollitia similique at saepe!</p>
-<h3>blog 2 </h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium commodi amet eaque recusandae placeat, consequuntur omnis? Quasi error ullam id accusamus cupiditate molestiae aliquid, soluta, eligendi mollitia similique at saepe!</p>
-    
+<article>
+    <h3> judul 1 </h3>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente natus voluptatem magni fugiat, distinctio expedita iusto impedit consectetur deserunt blanditiis eum vel odio, sunt, ratione explicabo laudantium optio reprehenderit saepe!</p>
+
+</article>
+<article>
+    <h3> judul 2 </h3>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente natus voluptatem magni fugiat, distinctio expedita iusto impedit consectetur deserunt blanditiis eum vel odio, sunt, ratione explicabo laudantium optio reprehenderit saepe!</p>
+
+</article>
 </body>
 </html>
