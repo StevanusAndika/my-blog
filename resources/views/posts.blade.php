@@ -6,7 +6,7 @@
 
 
   <article class="py-8 max-w-screen-md border-b border-gray-300">
-    <a href="{{ $post['id'] }}">
+    <a href="{{ $post['id'] }}" class="hover:underline">
     <h2 class="mb-1 text-3xl tracking-tighter font-bold text-gray-900">{{ $post ['title'] }}</h2>
   </a>
     <div class="text-base text-gray-500">
