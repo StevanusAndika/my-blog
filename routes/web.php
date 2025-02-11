@@ -17,12 +17,14 @@ Route::get('posts', function () {
         'posts' => [
             [
                 'id' => 1,
+                'slug'=>'judul-artikel-1',
                 'title' => 'Judul Artikel 1',
                 'author' => 'Steven',
                 'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident omnis possimus cumque eum fuga nisi mollitia corrupti ab nesciunt!'
             ],
             [
                 'id' => 2,
+                'slug'=>'judul-artikel-2',
                 'title' => 'Judul Artikel 2',
                 'author' => 'Stevan',
                 'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident omnis possimus cumque eum fuga nisi mollitia corrupti ab nesciunt!'
@@ -30,25 +32,28 @@ Route::get('posts', function () {
         ]
     ]);
 });
-Route::get('/posts/{id}', function ($id) {
+Route::get('/posts/{slug}', function ($slug) {
     $posts = [
         [
             'id'=> 1,
+            'slug'=>'judul-artikel-1',
             'title' => 'Judul Artikel 1',
+            
             'author' => 'Steven',
             'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident omnis possimus cumque eum fuga nisi mollitia corrupti ab nesciunt!'
         ],
         [
             'id' => 2,
             'title' => 'Judul Artikel 2',
+            'slug'=>'judul-artikel-2',
             'author' => 'Stevan',
             'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident omnis possimus cumque eum fuga nisi mollitia corrupti ab nesciunt!'
         ],
     ];
 
     // Menggunakan Arr::first untuk mencari post berdasarkan ID
-    $post = Arr::first($posts, function ($post) use ($id) {
-        return $post['id'] == $id;
+    $post = Arr::first($posts, function ($post) use ($slug) {
+        return $post['slug'] == $slug;
     });
 
     // Jika tidak ditemukan, tampilkan 404
@@ -57,7 +62,7 @@ Route::get('/posts/{id}', function ($id) {
     }
 
     return view('post', [
-        'title' =>'single post'.$post['title'],
+        'title' =>'single post',
         'post' => $post
     ]);
 });
