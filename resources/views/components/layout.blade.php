@@ -16,6 +16,7 @@
 
 <div class="min-h-full">
    <x-navbar></x-navbar>
+   <!-- get title from routes web-->
   <x-header>{{ $title }}</x-header>
    
     <main>
