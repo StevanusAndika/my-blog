@@ -3,16 +3,11 @@
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home', ['title' => 'Home Page']);
-});
+class Post {
 
-Route::get('about', function () {
-    return view('about', ['title' => 'About Page']);
-});
+ public  static function all(){
 
-Route::get('posts', function () {
-    return view('posts', [
+    return [
         'title' => 'Blog',
         'posts' => [
             [
@@ -30,7 +25,20 @@ Route::get('posts', function () {
                 'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident omnis possimus cumque eum fuga nisi mollitia corrupti ab nesciunt!'
             ],
         ]
-    ]);
+    ]
+ }
+}
+
+Route::get('/', function () {
+    return view('home', ['title' => 'Home Page']);
+});
+
+Route::get('about', function () {
+    return view('about', ['title' => 'About Page']);
+});
+
+Route::get('posts', function () {
+    return view('posts', );
 });
 Route::get('/posts/{slug}', function ($slug) {
     $posts = [
